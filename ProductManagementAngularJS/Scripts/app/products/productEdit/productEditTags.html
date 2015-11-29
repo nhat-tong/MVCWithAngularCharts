@@ -1,0 +1,19 @@
+﻿<form name="productTagsForm" class="form-horizontal" role="form" novalidate>
+    <fieldset>
+        <legend>Product Search Tags</legend>
+        <div class="form-group">
+            <label for="tags" class="col-md-2 control-label">Product Tags: </label>
+            <div class="col-md-8">
+                <input id="tags" name="tags" class="form-control" type="text" placeholder="Product tags list separated by comma" data-ng-model="vm.tags" />
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" data-ng-click="vm.addNewTags()">Add</button>
+            </div>
+        </div>
+        <div class="row col-md-offset-2 col-md-8">
+           <span data-ng-repeat="tag in vm.product.tags">
+               <button class="btn btn-default" data-ng-click="vm.removeTag($index)">{{tag}}<span class="glyphicon glyphicon-remove"></span></button>
+           </span>
+        </div>
+    </fieldset>
+</form>

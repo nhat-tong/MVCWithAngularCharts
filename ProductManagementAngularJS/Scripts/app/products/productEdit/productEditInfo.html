@@ -1,0 +1,42 @@
+﻿<form name="productInfoForm" class="form-horizontal" role="form" novalidate>
+    <fieldset>
+        <legend>Basic Product Information</legend>
+        <div class="form-group" data-ng-class="{'has-error has-feedback':productInfoForm.productCode.$invalid && productInfoForm.productCode.$dirty}">
+            <label for="productCode" class="col-md-2 control-label">Product Code: </label>
+            <div class="col-md-4">
+                <input id="productCode" name="productCode" class="form-control" type="text" placeholder="Product Code" ui-mask="AAA-****" data-ng-model="vm.product.productCode" required />
+            </div>
+            <span class="help-block has-error" data-ng-show="productInfoForm.productCode.required">Product Code is required</span>
+        </div>
+        <div class="form-group" data-ng-class="{'has-error has-feedback':productInfoForm.productName.$invalid && productInfoForm.productName.$dirty}">
+            <label for="productName" class="col-md-2 control-label">Product Name: </label>
+            <div class="col-md-4">
+                <input id="productName" name="productName" class="form-control" type="text" placeholder="Product Name" data-ng-model="vm.product.productName" data-ng-minlength="4" data-ng-maxlength="12" required />
+            </div>
+            <span class="help-block has-error">
+                <span data-ng-show="productInfoForm.productName.$required">Product Name is required</span>
+                <span data-ng-show="productInfoForm.productName.$error.minlength">Minlength is 4</span>
+                <span data-ng-show="productInfoForm.productName.$error.maxlength">Maxlength is 12</span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="available" class="col-md-2 control-label">Available: </label>
+            <div class="col-md-10">
+                <p class="input-group">
+                    <input id="available" name="available" class="form-control" type="text" placeholder="available" uib-datepicker-popup="{{vm.datePicker.config.format}}" is-open="vm.datePicker.options.isOpen" show-button-bar="vm.datePicker.options.showButtonBar" data-ng-model="vm.product.available" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" data-ng-click="vm.open($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description" class="col-md-2 control-label">Description: </label>
+            <div class="col-md-10">
+                <textarea id="description" name="description" class="form-control" type="text" placeholder="Description" rows="3" data-ng-model="vm.product.description" />
+            </div>
+        </div>
+    </fieldset>
+</form>

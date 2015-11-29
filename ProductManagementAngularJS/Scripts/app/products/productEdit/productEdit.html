@@ -1,0 +1,29 @@
+﻿<div data-ng-init="vm.init()">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="font-size:large">
+            {{vm.title}}
+        </div>
+        <div class="panel-body">
+            <div class="wizard">
+                <a ui-sref=".info" ui-sref-active="active" aria-controls="home" role="tab" data-toggle="tab">Basic Informations</a>
+                <a ui-sref=".price" ui-sref-active="active" aria-controls="profile" role="tab" data-toggle="tab">Price</a>
+                <a ui-sref=".tags" ui-sref-active="active" aria-controls="profile" role="tab" data-toggle="tab">Tags</a>
+            </div>
+            <div ui-view></div>
+
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-2">
+                    <span>
+                        <button class="btn btn-primary"
+                                style="width:80px;margin-right:10px"
+                                type="submit"
+                                ng-disabled="productInfoForm.$invalid || productPriceForm.$invalid || productTagsForm.$invalid"
+                                ng-click="vm.submit()">
+                            Save
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

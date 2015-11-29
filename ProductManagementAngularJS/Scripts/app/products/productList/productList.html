@@ -1,0 +1,31 @@
+﻿<div data-ng-init="vm.init()">
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Code</td>
+                    <td>Available</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="product in vm.products">
+                    <td>
+                        <a href="" ui-sref="productDetail({productCode: product.productCode})"><img data-ng-src="{{product.imageUrl}}"
+                        style="width:50px;margin:2px"
+                        title="{{product.productName}}"/></a>
+                        <a href="" data-ng-click="vm.view(product.imageUrl)">View</a>
+                    </td>
+                    <td>{{ product.productName}}</td>
+                    <td>{{ product.productCode }}</td>
+                    <td>{{ product.available }}</td>
+                    <td>{{ product.price | currency }}</td>
+                    <td><a href="" ui-sref="productEdit.info({productCode: product.productCode, test: test})"><input type="button" class="btn-primary" value="Edit"/></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="" ui-sref="productEdit.info"><input type="button" class="btn btn-primary" value="Add a new product"/></a>
+    </div>
+</div>

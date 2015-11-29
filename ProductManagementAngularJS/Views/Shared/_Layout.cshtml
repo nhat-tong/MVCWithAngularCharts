@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/bundles/master")
+</head>
+<body data-ng-app="app">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation"><a ui-sref="productList" ui-sref-active="active" aria-controls="home" role="tab" data-toggle="tab">Products</a></li>
+        <li role="presentation"><a ui-sref="price" ui-sref-active="active" aria-controls="profile" role="tab" data-toggle="tab">Price</a></li>
+    </ul>
+    <div>
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/app")
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "ProductManagementAngularJS",
+  "authors": [
+    "Nhat TONG <htong@expertime.com>"
+  ],
+  "description": "Product Management",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui-utils": "~3.0.0",
+    "angular-charts": "~0.2.7"
+  }
+}

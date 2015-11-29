@@ -1,0 +1,20 @@
+﻿<div class="container-fluid" data-ng-init="vm.init()">
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-body">Product Name: {{vm.productDetail.productName}}</div>
+                    <div class="panel-body">Description: {{vm.productDetail.description}}</div>
+                    <div class="panel-body">Available: {{vm.productDetail.available}}</div>
+                    <div class="panel-body">Cost: {{vm.productDetail.cost}}</div>
+                    <div class="panel-body">Price: {{vm.productDetail.price}}</div>
+                    <div class="panel-body">Category: {{vm.productDetail.category}}</div>
+                    <div class="panel-body">Tags: {{vm.productDetail.tags}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <img data-ng-src="{{vm.productDetail.imageUrl}}" alt="{{vm.productDetail.name}}"/>
+        </div>
+    </div>
+</div>

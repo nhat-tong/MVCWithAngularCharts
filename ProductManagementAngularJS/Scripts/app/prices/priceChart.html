@@ -1,0 +1,23 @@
+﻿<div data-ng-init="vm.init()">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="font-size:large">
+            Price Chart
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div data-ac-chart="'bar'"
+                     data-ac-data="vm.dataAmount"
+                     data-ac-config="vm.configAmount"
+                     class="chart">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div data-ac-chart="'bar'"
+                     data-ac-data="vm.dataPercent"
+                     data-ac-config="vm.configPercent"
+                     class="chart">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
